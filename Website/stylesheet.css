@@ -1,0 +1,147 @@
+/* General Reset */
+@font-face {
+  font-family: Customfont;
+  src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Header;
+  src: url("fonts/Avenir\ Next.ttc") format("truetype");
+}
+@font-face {
+  font-family: Tagline;
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Ivory White */
+  color: #333333; /* Charcoal Black */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 200px;
+  height: 60px;
+}
+
+/* Navigation Styles */
+.nav ul {
+  font-family: "Header";
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #333333; /* Charcoal Black */
+  transition: color 0.3s, font-size 0.3s;
+}
+
+.nav ul li a:hover {
+  font-size: 16px;
+  color: #84cc16; /* Lime Green */
+}
+
+/* Call-to-Action Button */
+.cta {
+  background-color: #1d4ed8; /* Cool Blue */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #333333; /* Charcoal Black */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.heading {
+  margin-top: 150px;
+  margin-left: 50px;
+  font-weight: bold;
+  font-size: 63.5px;
+  font-family: "Customfont";
+  line-height: 100px;
+}
+.now {
+  font-family: "Customfont";
+  font-weight: bold;
+  font-size: 63.5px;
+  color: #84cc16;
+}
+.potential-line {
+  margin-top: 150px;
+  font-weight: bold;
+  font-size: 63.5px;
+  font-family: "Customfont";
+  line-height: 100px;
+}
+.trading {
+  border-bottom: 4px solid #84cc16; /* Lime Green underline */
+  padding-bottom: 2px;
+}
+.tagline {
+  font-family: Tagline;
+  font-size: 30px;
+  margin-left: 50px;
+}
+.contactus {
+  margin-left: 50px;
+  margin-top: 15px;
+  height: 50px;
+  width: 180px;
+  background-color: #1d4ed8;
+  border: none;
+  border-radius: 25px;
+  color: #f9f9f9;
+  font-size: 15px;
+  font-weight: bold;
+}
