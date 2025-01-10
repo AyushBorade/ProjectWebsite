@@ -1,147 +1,386 @@
 /* General Reset */
 @font-face {
-  font-family: Customfont;
-  src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
+    font-family: Customfont;
+    src: url("fonts/ArchivoBlack-Regular.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: Header;
-  src: url("fonts/Avenir\ Next.ttc") format("truetype");
+    font-family: Header;
+    src: url("fonts/Avenir\ Next.ttc") format("truetype");
 }
+
 @font-face {
-  font-family: Tagline;
-  src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+    font-family: Tagline;
+    src: url("fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9; /* Ivory White */
-  color: #333333; /* Charcoal Black */
+    font-family: Arial, sans-serif;
+    background-color: #F9F9F9;
+    /* Ivory White */
+    color: #333333;
+    /* Charcoal Black */
 }
 
 /* Header Styles */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo Section */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo img {
-  width: 200px;
-  height: 60px;
+    width: 200px;
+    height: 60px;
 }
 
 /* Navigation Styles */
 .nav ul {
-  font-family: "Header";
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 .nav ul li a {
-  text-decoration: none;
-  font-size: 15px;
-  color: #333333; /* Charcoal Black */
-  transition: color 0.3s, font-size 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333333;
+    /* Charcoal Black */
+    transition: color 0.3s;
 }
 
 .nav ul li a:hover {
-  font-size: 16px;
-  color: #84cc16; /* Lime Green */
+    color: #84CC16;
+    /* Lime Green */
 }
 
 /* Call-to-Action Button */
 .cta {
-  background-color: #1d4ed8; /* Cool Blue */
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: #1D4ED8;
+    /* Cool Blue */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .cta:hover {
-  background-color: #333333; /* Charcoal Black */
+    background-color: #333333;
+    /* Charcoal Black */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .cta {
-    width: 100%;
-    max-width: 200px;
-  }
+    .cta {
+        width: 100%;
+        max-width: 200px;
+    }
 }
 
 .heading {
-  margin-top: 150px;
-  margin-left: 50px;
-  font-weight: bold;
-  font-size: 63.5px;
-  font-family: "Customfont";
-  line-height: 100px;
+    margin-top: 150px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 100px;
 }
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.image-container {
+    display: inline-block;
+    /* Adjust size to the content (image) */
+    background-color: rgb(201, 243, 139);
+    /* Green background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    /* Optional: Add padding around the image */
+}
+
+.mentor-image {
+    display: block;
+    max-width: 100%;
+    /* Ensure the image scales properly if necessary */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    /* Optional: Add slight rounding to the image corners */
+}
+.about-text,
+.what-to-expect {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.about-text h2,
+.what-to-expect h2 {
+    margin-top: 1rem 0;
+    color: #333;
+}
+
+.about-text p,
+.what-to-expect p {
+    padding-right: 10%;
+    margin: 2rem 0;
+    line-height: 1.6; 
+    color: #666;
+}
+
+.about-text{
+    padding: 5rem;
+    padding-left: 1%;
+}
+
+.what-to-expect{
+    padding: 5rem;
+    padding-left: 1%;
+    /*margin-bottom: 5rem 0%; */
+}
+
+/*edit-8th jan by aarya*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.heading {
+    margin-top: 150px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 63.5px;
+    font-family: "Customfont";
+    line-height: 100px;
+}
+
 .now {
-  font-family: "Customfont";
-  font-weight: bold;
-  font-size: 63.5px;
-  color: #84cc16;
+    font-family: "Customfont";
+    font-weight: bold;
+    font-size: 63.5px;
+    color: #84cc16;
 }
+
 .potential-line {
-  margin-top: 150px;
-  font-weight: bold;
-  font-size: 63.5px;
-  font-family: "Customfont";
-  line-height: 100px;
+    margin-top: 150px;
+    font-weight: bold;
+    font-size: 63.5px;
+    font-family: "Customfont";
+    line-height: 100px;
 }
+
 .trading {
-  border-bottom: 4px solid #84cc16; /* Lime Green underline */
-  padding-bottom: 2px;
+    border-bottom: 4px solid #84cc16;
+    /* Lime Green underline */
+    padding-bottom: 2px;
 }
+
 .tagline {
-  font-family: Tagline;
-  font-size: 30px;
-  margin-left: 50px;
+    font-family: Tagline;
+    font-size: 30px;
+    margin-left: 50px;
 }
+
 .contactus {
-  margin-left: 50px;
-  margin-top: 15px;
-  height: 50px;
-  width: 180px;
-  background-color: #1d4ed8;
-  border: none;
-  border-radius: 25px;
-  color: #f9f9f9;
-  font-size: 15px;
-  font-weight: bold;
+    margin-left: 50px;
+    margin-top: 15px;
+    height: 50px;
+    width: 180px;
+    background-color: #1d4ed8;
+    border: none;
+    border-radius: 25px;
+    color: #f9f9f9;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Trading Community Section */
+.trading-community {
+    width: 90%;
+    /* Make section wider */
+    max-width: 1200px;
+    /* Limit maximum width for large screens */
+    margin: 0 auto;
+    /* Center the section horizontally */
+    padding: 40px 20px;
+    /* Add padding inside the section */
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    /* Include padding in width */
+    text-align: center;
+    /* Center all text content */
+}
+
+/* Heading Styling */
+.trading-community h1 {
+    font-size: 2.5rem;
+    /* Larger heading size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    /* Contrast text color */
+}
+
+/* Paragraph Styling */
+.trading-community p {
+    font-size: 1.1rem;
+    /* Larger paragraph font size */
+    margin: 15px 0;
+    color: #555;
+    /* Softer text color */
+    line-height: 1.6;
+    /* Increase line spacing */
+}
+
+/* Bold Text Styling */
+.trading-community strong {
+    font-weight: bold;
+    color: #000;
+    /* Make bold text stand out */
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    justify-content: center;
+    /* Center cards horizontally */
+    gap: 30px;
+    /* Add space between cards */
+    margin-top: 30px;
+}
+
+/* Individual Card Styling */
+.card {
+    flex: 1 1 250px;
+    /* Responsive flex size */
+    max-width: 300px;
+    /* Maximum width of cards */
+    height: 200px;
+    /* Height of cards */
+    background-image: url('images/blue\ bg.png');
+    /* Replace with actual image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Hover effects */
+}
+
+/* Hover Effects for Cards */
+.card:hover {
+    transform: translateY(-10px);
+    /* Lift card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Darker shadow */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .trading-community {
+        width: 95%;
+        /* Adjust width for smaller devices */
+        padding: 30px 10px;
+        /* Reduce padding */
+    }
+
+    .trading-community h1 {
+        font-size: 2rem;
+        /* Adjust heading size */
+    }
+
+    .trading-community p {
+        font-size: 1rem;
+        /* Adjust paragraph size */
+    }
+
+    .card {
+        flex: 1 1 100%;
+        /* Cards take up full width */
+        max-width: none;
+        height: 180px;
+        /* Adjust card height */
+    }
+}
+
+@media (max-width: 480px) {
+    .trading-community h1 {
+        font-size: 1.8rem;
+        /* Smaller heading size */
+    }
+
+    .trading-community p {
+        font-size: 0.95rem;
+        /* Smaller paragraph font size */
+    }
+
+    .card {
+        height: 160px;
+        /* Adjust card height further */
+    }
 }
